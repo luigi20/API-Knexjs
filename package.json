@@ -1,8 +1,29 @@
 {
+  "name": "api-knexjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "knexfile.js",
+  "scripts": {
+    "dev": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luigi20/API-Knexjs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luigi20/API-Knexjs/issues"
+  },
+  "homepage": "https://github.com/luigi20/API-Knexjs#readme",
   "dependencies": {
-    "express": "^4.17.1",
-    "knex": "^0.95.14",
-    "nodemon": "^2.0.15",
-    "pg": "^8.7.1"
+    "express": "^4.17.2",
+    "knex": "^0.95.15",
+    "pg": "^8.7.1",
+    "yarn": "^1.22.17"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
