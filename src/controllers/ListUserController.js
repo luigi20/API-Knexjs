@@ -1,6 +1,6 @@
-const UserIndex = require('../services/UserIndex');
+const UserIndex = require('../services/UserIndexService');
 module.exports = {
-    async index(req, res) {
+    async handle(req, res) {
         const result = await UserIndex.execute();
         return res.json(result);
     }
