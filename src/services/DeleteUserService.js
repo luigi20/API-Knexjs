@@ -1,13 +1,14 @@
 const knex = require('../database');
 module.exports = {
-    async execute() {
-
-        await knex('users')
-            .where({ id })
-            .update('deleted_at', new Date())
-        // .del()
-
-        return res.send()
+    async execute(id) {
+        try {
+            await knex('users')
+                .where('id', '=', id)
+                .del();
+            return res.status(200).send("User Delete");
+        } catch (err) {
+            new Error(err.message)
+        }
 
     }
 }
