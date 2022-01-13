@@ -1,4 +1,4 @@
-
+const { onUpdateTrigger } = require('../../../knexfile');
 exports.up = function (knex) {
     return knex.schema.createTable('projects', function (table) {
         table.increments('id').primary;
@@ -10,7 +10,7 @@ exports.up = function (knex) {
             .inTable('users')
             .notNullable()
             .onDelete('CASCADE')
-    })
+    }).then(() => knex.raw(onUpdateTrigger('projects')))
 };
 
 exports.down = function (knex) {
